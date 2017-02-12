@@ -23,7 +23,7 @@ def get_symbol_list(symbol_data, exchange_name):
     # symbol,company,sector,industry,headquaters
     symbol_data = list(map(lambda x: x.split(","), symbol_data))
     # remove any blank lists from within the list 
-symbol_data = [x for x in symbol_data if len(x) > 1]
+    symbol_data = [x for x in symbol_data if len(x) > 1]
     # We need to cut off the the last row because it is a null string
     for row in symbol_data[1:-1]:
         symbol_data_dict = dict()
